@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+- '6'
+cache:
+  yarn: true
+  directories:
+  - node_modules
+script:
+- yarn run test
+deploy:
+  provider: heroku
+  api_key:
+    secure: INLDusOxPCuJKzGv3mMFnppQsZoqrgG/cE/L6NGr02818TYya/hQXgGUcu0CojKYoQNAc022MhaIhumCkpYDSm7i+IgPhYmsVrxlY6MX338xw7IuNC3DzuIflImeOraJgpv9HapSWMVeRCra0+zJzUy0H2RVU7w9Nd7J/pW1mTbYhTQAR+iZ6F04YXRP39M9Cd6hglZuZwunfzpbDVMT0O55F6Ilp6+qr/bNt7S6pV9NhIeH681zmGIyuRW2OADJBcSvrf/uEUCtxDSl2yrQdw6EwfMSPSXUDntrVf5zsLL1yi3IyLkWoeSl/YZZCrVu+4kcyAWGRfTdiRb5pmUM5Jw5ZZlVCbaZpV3M8G2HJKwAZ6QvXq8qG+jdepzBYX3OamPjnwl1JrNO0yZTGSQw1tWOYwGYJL4FUJrNMwvhVvkVfOjlwhz0e9G1r0Q2AJ91nzHv4T4dAEEyJwl9M3Q/IbeaVX9mN3skZJnGvUZ1wwvXbJMmWNyPoCndidBeO7z637D8DTmpc+ADNmnej5Dk+6oez6dQ8+0+aoHfoANJAnu2VRxhKIg5ilPO7e/o2my0wte7Tk0IVQDd4zFizk6Y6h+ezIKEO1lUDGG+0Fv2o+wQFQiSf+ca5jIlyt162BOvsSBxAJgUdO+XAl9qcqeL64cO31lj91Y96dJRtGZX4Iw=
+  app: my-next-vote-api
+  on:
+    repo: mynextvote/api
