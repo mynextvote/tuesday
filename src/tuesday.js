@@ -13,7 +13,7 @@ function fromFirstOfMonth (moment) {
   }
 }
 
-export function tuesday (month, year, nth) {
+export default function tuesday (month, year, nth) {
   let firstOfMonth = moment().year(year)
                               .month(month - 1) // months are 0 indexed
                               .date(1)

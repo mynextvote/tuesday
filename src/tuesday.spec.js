@@ -5,7 +5,7 @@ function getItRight (result, expected) {
   return expect(result).toEqual(expected)
 }
 
-import { tuesday } from './tuesday'
+import tuesday from './tuesday'
 
 describe('tuesday', () => {
   it('should return the right format', () => {
