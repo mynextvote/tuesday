@@ -1,21 +1,28 @@
 {
   "name": "mnv-tuesday",
-  "version": "0.0.0-semantic-release",
+  "version": "0.0.0-development",
   "main": "dist/tuesday.js",
+  "homepage": "https://github.com/mynextvote/terms",
+  "bugs": "https://github.com/mynextvote/terms/issues",
+  "repository": {
+    "url": "https://github.com/mynextvote/terms",
+    "type": "git"
+  },
   "license": "MIT",
   "dependencies": {
-    "babel-preset-es2015": "^6.22.0",
     "moment": "^2.17.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
     "expect": "^1.20.2",
     "mocha": "^3.2.0",
-    "semantic-release": "^6.3.2",
+    "semantic-release": "^6.3.6",
     "standard": "^8.6.0"
   },
   "scripts": {
-    "build": "babel src -s -D -d dist",
+    "build": "NODE_ENV=production mkdir -p dist && babel src --out-dir dist --ignore \"**/*.spec.js\"",
     "test": "standard && mocha --compilers babel-core/register src/*.spec.js",
     "test:watch": "yarn run test -- --watch",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
