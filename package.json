@@ -2,10 +2,10 @@
   "name": "mnv-tuesday",
   "version": "0.0.0-development",
   "main": "dist/tuesday.js",
-  "homepage": "https://github.com/mynextvote/terms",
-  "bugs": "https://github.com/mynextvote/terms/issues",
+  "homepage": "https://github.com/mynextvote/tuesday",
+  "bugs": "https://github.com/mynextvote/tuesday/issues",
   "repository": {
-    "url": "https://github.com/mynextvote/terms",
+    "url": "https://github.com/mynextvote/tuesday",
     "type": "git"
   },
   "license": "MIT",
